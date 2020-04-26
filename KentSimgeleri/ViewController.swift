@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         sehirResimleri.append(UIImage(named: "adana")!)
         sehirResimleri.append(UIImage(named: "urfa")!)
         sehirResimleri.append(UIImage(named: "istanbul")!)
-        navigationItem.title = "Şehir Resimleri"
+        navigationItem.title = "Şehirler"
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
