@@ -13,6 +13,7 @@
 		EA9F4CE12455242D00B26437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9F4CDF2455242D00B26437 /* Main.storyboard */; };
 		EA9F4CE32455243100B26437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9F4CE22455243100B26437 /* Assets.xcassets */; };
 		EA9F4CE62455243100B26437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9F4CE42455243100B26437 /* LaunchScreen.storyboard */; };
+		EA9F4CEE245530CA00B26437 /* sehirDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F4CED245530CA00B26437 /* sehirDetay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EA9F4CE22455243100B26437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9F4CE52455243100B26437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9F4CE72455243100B26437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA9F4CED245530CA00B26437 /* sehirDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sehirDetay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EA9F4CD92455242D00B26437 /* AppDelegate.swift */,
 				EA9F4CDB2455242D00B26437 /* SceneDelegate.swift */,
 				EA9F4CDD2455242D00B26437 /* ViewController.swift */,
+				EA9F4CED245530CA00B26437 /* sehirDetay.swift */,
 				EA9F4CDF2455242D00B26437 /* Main.storyboard */,
 				EA9F4CE22455243100B26437 /* Assets.xcassets */,
 				EA9F4CE42455243100B26437 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9F4CDE2455242D00B26437 /* ViewController.swift in Sources */,
+				EA9F4CEE245530CA00B26437 /* sehirDetay.swift in Sources */,
 				EA9F4CDA2455242D00B26437 /* AppDelegate.swift in Sources */,
 				EA9F4CDC2455242D00B26437 /* SceneDelegate.swift in Sources */,
 			);

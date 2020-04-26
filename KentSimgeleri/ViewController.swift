@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var sehirIsimleri = [String]()
     var sehirResimleri = [UIImage]()
+    var secilenSehir = ""
+    var secilenSehirResim = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -47,6 +49,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return sehirIsimleri.count
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        secilenSehir = sehirIsimleri[indexPath.row]
+        secilenSehirResim = sehirResimleri[indexPath.row]
+        performSegue(withIdentifier: "toSehirDetay", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSehirDetay" {
+            let sehirDetaySayfasi = segue.destination as! sehirDetay
+            sehirDetaySayfasi.secilensehirAdi = secilenSehir
+            sehirDetaySayfasi.secilensehirResmi = secilenSehirResim
+        }
     }
 }
 
