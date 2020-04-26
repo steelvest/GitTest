@@ -11,31 +11,42 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource   {
 
     @IBOutlet weak var tableView: UITableView!
+    var sehirIsimleri = [String]()
+    var sehirResimleri = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
         
-        var sehirIsimleri = [String]()
+        
         sehirIsimleri.append("Aksaray")
         sehirIsimleri.append("Adana")
         sehirIsimleri.append("Şanlıurfa")
         sehirIsimleri.append("İstanbul")
         
-        var sehirResimleri = [UIImage]()
+        
         sehirResimleri.append(UIImage(named: "aksaray")!)
         sehirResimleri.append(UIImage(named: "adana")!)
         sehirResimleri.append(UIImage(named: "urfa")!)
         sehirResimleri.append(UIImage(named: "istanbul")!)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            sehirIsimleri.remove(at: indexPath.row)
+            sehirResimleri.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = sehirIsimleri[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        return sehirIsimleri.count
     }
 }
 
